@@ -7,16 +7,16 @@
         <b-col>Col 3</b-col>
       </b-row>
       <img alt="Vue logo" src="./assets/logo.png">
-      <HelloWorld msg="Web components tester"/>
-      <zen-simple name="Božidar"/>
+      <HelloWorld msg="Web components tester" />
+      <zen-simple name="Božidar" />
     </b-container>
   </div>
 </template>
 
 <script>
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.css';
 import { BContainer, BRow, BCol } from 'bootstrap-vue';
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
 
 export default {
   name: 'App',
@@ -25,8 +25,8 @@ export default {
     BContainer,
     BRow,
     BCol,
-  }
-}
+  },
+};
 </script>
 
 <style>
