@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
-/dist
+dist
+stencil/loader
+stencil/www
 
 
 # local env files
