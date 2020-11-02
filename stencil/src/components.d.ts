@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { OptionItem } from "./components/zen-dropdown-simple/zen-dropdown-simple";
 export namespace Components {
     interface MyComponent {
         /**
@@ -21,6 +22,8 @@ export namespace Components {
         "middle": string;
     }
     interface ZenDropdownSimple {
+        "options": Array<OptionItem>;
+        "value": string;
     }
     interface ZenSimple {
         "name": string;
@@ -81,6 +84,8 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface ZenDropdownSimple {
+        "options"?: Array<OptionItem>;
+        "value"?: string;
     }
     interface ZenSimple {
         "name"?: string;
