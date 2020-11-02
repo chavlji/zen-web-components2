@@ -20,8 +20,17 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface ZenDropdownSimple {
+    }
     interface ZenSimple {
         "name": string;
+        "opened": boolean;
+        "value": string;
+    }
+    interface ZenSimpleNonShadow {
+        "name": string;
+        "opened": boolean;
+        "value": string;
     }
 }
 declare global {
@@ -31,15 +40,29 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLZenDropdownSimpleElement extends Components.ZenDropdownSimple, HTMLStencilElement {
+    }
+    var HTMLZenDropdownSimpleElement: {
+        prototype: HTMLZenDropdownSimpleElement;
+        new (): HTMLZenDropdownSimpleElement;
+    };
     interface HTMLZenSimpleElement extends Components.ZenSimple, HTMLStencilElement {
     }
     var HTMLZenSimpleElement: {
         prototype: HTMLZenSimpleElement;
         new (): HTMLZenSimpleElement;
     };
+    interface HTMLZenSimpleNonShadowElement extends Components.ZenSimpleNonShadow, HTMLStencilElement {
+    }
+    var HTMLZenSimpleNonShadowElement: {
+        prototype: HTMLZenSimpleNonShadowElement;
+        new (): HTMLZenSimpleNonShadowElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "zen-dropdown-simple": HTMLZenDropdownSimpleElement;
         "zen-simple": HTMLZenSimpleElement;
+        "zen-simple-non-shadow": HTMLZenSimpleNonShadowElement;
     }
 }
 declare namespace LocalJSX {
@@ -57,12 +80,23 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface ZenDropdownSimple {
+    }
     interface ZenSimple {
         "name"?: string;
+        "opened"?: boolean;
+        "value"?: string;
+    }
+    interface ZenSimpleNonShadow {
+        "name"?: string;
+        "opened"?: boolean;
+        "value"?: string;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "zen-dropdown-simple": ZenDropdownSimple;
         "zen-simple": ZenSimple;
+        "zen-simple-non-shadow": ZenSimpleNonShadow;
     }
 }
 export { LocalJSX as JSX };
@@ -70,7 +104,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "zen-dropdown-simple": LocalJSX.ZenDropdownSimple & JSXBase.HTMLAttributes<HTMLZenDropdownSimpleElement>;
             "zen-simple": LocalJSX.ZenSimple & JSXBase.HTMLAttributes<HTMLZenSimpleElement>;
+            "zen-simple-non-shadow": LocalJSX.ZenSimpleNonShadow & JSXBase.HTMLAttributes<HTMLZenSimpleNonShadowElement>;
         }
     }
 }

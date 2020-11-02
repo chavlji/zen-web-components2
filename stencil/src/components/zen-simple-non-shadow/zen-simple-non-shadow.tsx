@@ -1,9 +1,9 @@
 import { Component, Host, h, Prop, /*Listen, Event, EventEmitter,State */ } from '@stencil/core';
 
 @Component({
-  tag: 'zen-simple',
-  styleUrl: 'zen-simple.css',
-  shadow: true,
+  tag: 'zen-simple-non-shadow',
+  styleUrl: 'zen-simple-non-shadow.css',
+  // shadow: true,
 })
 export class ZenSimple {
 
@@ -41,8 +41,7 @@ export class ZenSimple {
   render() {
     return (
       <Host>
-        <h3>Stencil with shadow: true</h3>
-        <p>Value: {this.value}</p>
+        <p>NON SHADOW: {this.value}</p>
         <p>Opened: {this.opened ? 'Opened' : 'Closed'}</p>
         <input type="text"/>
         <input type="text" placeholder="Insert something" value={this.value} onChange={(event) => this.onValueInputChange(event)}/>
