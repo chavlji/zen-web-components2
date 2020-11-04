@@ -42,6 +42,7 @@ export class ZenSimple {
     return (
       <Host>
         <h3>Stencil with shadow: true</h3>
+        <p>Name: {this.name}</p>
         <p>Value: {this.value}</p>
         <p>Opened: {this.opened ? 'Opened' : 'Closed'}</p>
         <input type="text"/>

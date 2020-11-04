@@ -23,7 +23,8 @@ export namespace Components {
     }
     interface ZenDropdownSimple {
         "options": Array<OptionItem>;
-        "value": string;
+        "trackBy": string;
+        "val": OptionItem;
     }
     interface ZenSimple {
         "name": string;
@@ -84,8 +85,10 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface ZenDropdownSimple {
+        "onInput2"?: (event: CustomEvent<OptionItem>) => void;
         "options"?: Array<OptionItem>;
-        "value"?: string;
+        "trackBy"?: string;
+        "val"?: OptionItem;
     }
     interface ZenSimple {
         "name"?: string;

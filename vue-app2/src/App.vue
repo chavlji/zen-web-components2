@@ -3,18 +3,19 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <b-row>
       <b-col>
-        <zen-simple name="Božidar" :value="stencilValue" />
+        <zen-simple name="Božidar" />
       </b-col>
       <b-col>
-        <zen-simple-non-shadow name="AAAAAA" :value="stencilValue" />
+        <zen-simple-non-shadow name="AAAAAA" :value="'x'" />
       </b-col>
       <b-col>
-        <zen-dropdown-simple name="AAAAAA" :value="stencilValue" />
+        <p>vue: {{ value }}</p>
+        <zen-dropdown-simple :val.prop="value" :options.prop="options" @input2="input" />
       </b-col>
     </b-row>
     <p>Native p element</p>
     <input type="text">
-      <button @click="stencilValue = 'form vue button'">set stencil value</button>
+      <button @click="value = {label: 'Bum'}">set stencil value</button>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -32,8 +33,28 @@ export default {
     BCol,
   },
   data: () => ({
-    stencilValue: 'vue default',
+    value: { label: 'Canadax' },
+    jan: {a: 'jan'},
+    options: [
+      {label: 'Canadax'},
+      {label: 'Bum'},
+      {label: 'Luxembourg'}
+    ]
   }),
+  mounted() {
+    /* setTimeout(() => {
+      this.options = [
+        {label: 'Canadaxx2'},
+        {label: 'Luxembourgxx2'}
+      ];
+      console.log('set!');
+    }, 2000); */
+  },
+  methods: {
+    input(event) {
+      console.log('input', event.detail.label);
+    }
+  }
 }
 </script>
 

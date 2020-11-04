@@ -7,10 +7,18 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type           | Default                            |
-| --------- | --------- | ----------- | -------------- | ---------------------------------- |
-| `options` | --        |             | `OptionItem[]` | `[{label: 'jan'}, {label: 'ban'}]` |
-| `value`   | `value`   |             | `string`       | `'Initial value'`                  |
+| Property  | Attribute  | Description | Type           | Default         |
+| --------- | ---------- | ----------- | -------------- | --------------- |
+| `options` | --         |             | `OptionItem[]` | `[]`            |
+| `trackBy` | `track-by` |             | `string`       | `'label'`       |
+| `val`     | --         |             | `OptionItem`   | `{ label: '' }` |
+
+
+## Events
+
+| Event    | Description | Type                      |
+| -------- | ----------- | ------------------------- |
+| `input2` |             | `CustomEvent<OptionItem>` |
 
 
 ----------------------------------------------
